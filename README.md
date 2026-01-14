@@ -21,6 +21,7 @@ A collection of practical data science examples covering data analysis, machine 
 
 - [examples/simple_linear_model](examples/simple_linear_model): Simple ad-spend → sales prediction.
 	- What you learn: split data into train/test, fit a straight-line model (LinearRegression), read common metrics (MAE, RMSE, R²), and visualize predicted vs actual sales.
+	- How to think about it: teach the model with part of the table, check it on the rest, see three scores (MAE/RMSE → lower is better, R² → closer to 1 is better), look at each channel’s weight (how much it moves sales), and view a scatter plot where the dashed line is “perfect predictions.”
 	- Run:
 		```bash
 		python examples/simple_linear_model/train_linear_model.py
