@@ -27,7 +27,13 @@ A collection of practical data science examples covering data analysis, machine 
 		python examples/simple_linear_model/train_linear_model.py
 		```
 	- You will see: printed metrics and coefficients plus the plot file `pred_vs_actual.png` in the same folder.
-
+- [examples/github_deployment](examples/github_deployment): Auto-generate and deploy HTML reports with GitHub Actions.
+	- What you learn: create an HTML report from data, automate it with GitHub Actions, and deploy to GitHub Pages.
+	- Run:
+		```bash
+		python examples/github_deployment/generate_report.py
+		```
+	- You will see: a `report/` folder with an HTML dashboard showing traffic stats and charts. Open `index.html` in your browser.
 ## Tips if you're new
 - If a command is not found, check you are in this folder and Python is installed.
 - If imports fail, rerun the install command above.
