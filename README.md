@@ -1,27 +1,35 @@
 # data-science-examples
 A collection of practical data science examples covering data analysis, machine learning, and visualization using Python.
 
-## Structure
-- [examples/basic_stats](examples/basic_stats): Descriptive statistics starter with a tiny CSV and Matplotlib scatter plot.
-	- Purpose: show an end-to-end mini workflow—load CSV, profile, group by city, compute a rolling average, and plot temperature vs sales.
-- [examples/simple_linear_model](examples/simple_linear_model): Train/test split with scikit-learn LinearRegression on a small advertising-style dataset, plus a predicted-vs-actual plot.
-	- Purpose: minimal ML example—fit, evaluate (MAE/RMSE/R²), inspect coefficients, and visualize predictions.
-
-## Getting started
-1) Install dependencies (consider a virtualenv):
+## Quick start (friendly for beginners)
+1) Install Python 3.11+.
+2) Open a terminal in this folder.
+3) Install the needed libraries:
 	```bash
 	pip install pandas matplotlib scikit-learn
 	```
-2) Run the basic stats example from the repo root:
-	```bash
-	python examples/basic_stats/analysis.py
-	```
-3) Run the simple linear model:
-	```bash
-	python examples/simple_linear_model/train_linear_model.py
-	```
-4) Outputs:
-	- `basic_stats`: console stats plus `examples/basic_stats/sales_vs_temperature.png` scatter plot.
-	- `simple_linear_model`: metrics (MAE/RMSE/R²), coefficients, and `examples/simple_linear_model/pred_vs_actual.png` predicted-vs-actual plot.
+4) Run an example (see below). Each script prints results and saves a picture in its folder.
 
-More examples (ML, visualization, feature engineering) can be added alongside `basic_stats/` following the same pattern.
+## Examples
+- [examples/basic_stats](examples/basic_stats): Small weather-and-sales table.
+	- What you learn: load a CSV, check for missing data, see averages by city, compute a tiny moving average, and draw a scatter plot (temperature vs sales).
+	- Run:
+		```bash
+		python examples/basic_stats/analysis.py
+		```
+	- You will see: printed stats plus the plot file `sales_vs_temperature.png` in the same folder.
+
+- [examples/simple_linear_model](examples/simple_linear_model): Simple ad-spend → sales prediction.
+	- What you learn: split data into train/test, fit a straight-line model (LinearRegression), read common metrics (MAE, RMSE, R²), and visualize predicted vs actual sales.
+	- Run:
+		```bash
+		python examples/simple_linear_model/train_linear_model.py
+		```
+	- You will see: printed metrics and coefficients plus the plot file `pred_vs_actual.png` in the same folder.
+
+## Tips if you're new
+- If a command is not found, check you are in this folder and Python is installed.
+- If imports fail, rerun the install command above.
+- Open the CSVs to see the raw data: [examples/basic_stats/data.csv](examples/basic_stats/data.csv) and [examples/simple_linear_model/data.csv](examples/simple_linear_model/data.csv).
+
+More examples (visualization, feature engineering, and beyond) can be added alongside these folders using the same pattern.
