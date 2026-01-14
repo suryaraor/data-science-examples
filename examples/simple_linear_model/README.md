@@ -1,37 +1,42 @@
 # Simple Linear Model Example
 
-Goal: Predict sales from ad spend (TV, radio, social) with a basic linear regression and understand its quality.
+Predict sales from ad spend (TV, radio, social) using a straight-line model, then judge how good it is.
 
-Data
-- File: data.csv
-- Columns: tv_spend, radio_spend, social_spend (floats), sales (float target)
+What you need
+- Python
+- pandas, matplotlib, scikit-learn (install: `pip install pandas matplotlib scikit-learn`)
+- File: data.csv (already here)
+
+What the data means
+- tv_spend, radio_spend, social_spend: money spent on each channel
+- sales: the sales that followed (this is what we predict)
 
 What the script does (train_linear_model.py)
-- Load the dataset.
-- Split rows into train (learn) and test (check) sets.
-- Fit sklearn LinearRegression on train data.
-- Predict sales on the test set.
-- Report metrics: MAE, RMSE (lower is better), R² (closer to 1 is better).
-- Show learned coefficients per channel and the intercept.
-- Plot predicted vs actual sales with a dashed identity line (perfect predictions).
+- Loads data.csv.
+- Splits rows into train (to learn) and test (to check).
+- Fits LinearRegression on the train set.
+- Predicts sales on the test set.
+- Reports three scores: MAE and RMSE (lower is better), R² (closer to 1 is better).
+- Prints the weight for each channel and the intercept (baseline sales).
+- Draws predicted vs actual sales with a dashed line showing “perfect” predictions.
 
-Run it
+How to run
 ```bash
 python examples/simple_linear_model/train_linear_model.py
 ```
 
-Outputs
-- Console: metrics, coefficients, intercept.
-- File: pred_vs_actual.png (scatter of predicted vs actual with ideal line).
+What you will see
+- Console text: metrics, channel weights (coefficients), and intercept.
+- Image file: pred_vs_actual.png (saved in this folder).
 
-How to read the results
-- MAE/RMSE: average error size; smaller means better predictions.
-- R²: fraction of sales variation explained; nearer to 1 means a stronger fit.
-- Coefficients: how much each channel moves sales; negative means spending there reduces predicted sales (in this tiny sample).
-- Plot: points near the dashed line are good predictions; wide scatter means the model is limited.
+How to read it
+- MAE/RMSE: typical size of the prediction error; smaller is better.
+- R²: how much of the sales variation the model explains; closer to 1 is better.
+- Coefficients: how much each channel moves predicted sales; a negative value means that channel lowers the prediction in this toy sample.
+- Plot: points near the dashed line are good predictions; a wide scatter means the model is limited.
 
-Try this next
-- Change test_size in train_test_split to see how it affects metrics.
-- Remove one feature (e.g., social_spend) to test its impact.
-- Add synthetic noise to sales to see metrics drop.
-- Swap LinearRegression for Ridge or Lasso to compare coefficients.
+Try your own tweaks
+- Change test_size in train_test_split to see how scores change.
+- Drop a feature (e.g., remove social_spend) and rerun to see its importance.
+- Add a new feature column (e.g., billboard_spend) and fit again.
+- Replace LinearRegression with Ridge or Lasso to compare the coefficients.
