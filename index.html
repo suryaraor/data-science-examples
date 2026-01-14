@@ -1,0 +1,122 @@
+
+    <!DOCTYPE html> 
+    <html>
+    <head>
+        <title>Traffic Analysis Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 900px;
+                margin: 40px auto;
+                padding: 20px;
+                background: #f5f5f5;
+            }
+            .container {
+                background: white;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            h1 {
+                color: #2c3e50;
+                border-bottom: 3px solid #3498db;
+                padding-bottom: 10px;
+            }
+            .stats {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+                margin: 20px 0;
+            }
+            .stat-card {
+                background: #ecf0f1;
+                padding: 15px;
+                border-radius: 5px;
+                border-left: 4px solid #3498db;
+            }
+            .stat-label {
+                font-size: 0.9em;
+                color: #7f8c8d;
+                margin-bottom: 5px;
+            }
+            .stat-value {
+                font-size: 1.5em;
+                font-weight: bold;
+                color: #2c3e50;
+            }
+            .plot {
+                margin: 30px 0;
+                text-align: center;
+            }
+            .plot img {
+                max-width: 100%;
+                border-radius: 5px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            }
+            .footer {
+                margin-top: 30px;
+                padding-top: 20px;
+                border-top: 1px solid #ecf0f1;
+                text-align: center;
+                color: #95a5a6;
+                font-size: 0.9em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>📊 Website Traffic Analysis Report</h1>
+            <p>Generated on: 2026-01-14 17:14:40</p>
+            
+            <h2>Key Metrics</h2>
+            <div class="stats">
+    
+                <div class="stat-card">
+                    <div class="stat-label">Total Page Views</div>
+                    <div class="stat-value">19130</div>
+                </div>
+        
+                <div class="stat-card">
+                    <div class="stat-label">Total Unique Visitors</div>
+                    <div class="stat-value">13220</div>
+                </div>
+        
+                <div class="stat-card">
+                    <div class="stat-label">Average Daily Page Views</div>
+                    <div class="stat-value">1,366.4</div>
+                </div>
+        
+                <div class="stat-card">
+                    <div class="stat-label">Average Daily Visitors</div>
+                    <div class="stat-value">944.3</div>
+                </div>
+        
+                <div class="stat-card">
+                    <div class="stat-label">Peak Page Views</div>
+                    <div class="stat-value">1,710</div>
+                </div>
+        
+                <div class="stat-card">
+                    <div class="stat-label">Peak Date</div>
+                    <div class="stat-value">2026-01-09</div>
+                </div>
+        
+            </div>
+            
+            <h2>Traffic Trends</h2>
+            <div class="plot">
+                <img src="timeseries.png" alt="Traffic over time">
+            </div>
+            
+            <h2>Summary</h2>
+            <div class="plot">
+                <img src="summary.png" alt="Total traffic summary">
+            </div>
+            
+            <div class="footer">
+                <p>Auto-generated report from data-science-examples</p>
+            </div>
+        </div>
+    </body>
+    </html>
+    
